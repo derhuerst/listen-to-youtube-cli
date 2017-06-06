@@ -1,0 +1,34 @@
+{
+	"name": "listen-to-youtube-cli",
+	"description": "Stream YouTube audio and listen to it.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"youtube",
+		"audio",
+		"cli",
+		"stream",
+		"music"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/listen-to-youtube-cli",
+	"repository": "derhuerst/listen-to-youtube-cli",
+	"bugs": "https://github.com/derhuerst/listen-to-youtube-cli/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"tape": "^4.6.3",
+		"tap-min": "^1.2.1"
+	},
+	"scripts": {
+		"test": "node test.js | tap-min",
+		"prepublishOnly": "npm test"
+	}
+}
