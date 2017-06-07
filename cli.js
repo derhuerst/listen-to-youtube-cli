@@ -2,6 +2,8 @@
 'use strict'
 
 const minimist = require('minimist')
+const tty = require('tty')
+const Speaker = require('speaker')
 const listenToYoutube = require('.')
 
 const pkg = require('./package.json')
@@ -30,9 +32,11 @@ const showError = function (err) {
 	process.exit(err.code || 1)
 }
 
+const isPiped = !tty.isatty(process.stdout.fd)
+const out = isPiped ? process.stdout : new Speaker()
+
 const url = argv._[0]
 if (!url) showError('Missing url.')
 
-listenToYoutube(url)
-.then(() => console.error('end!!')) // todo
+listenToYoutube(url, out)
 .catch(showError)

@@ -1,6 +1,18 @@
 # listen-to-youtube-cli
 
-**Stream YouTube audio and listen to it.**
+**Stream YouTube audio and listen to it.** Magic UNIX:
+
+```shell
+# add ./node_modules/.bin to your $PATH
+
+# computer 1
+npm i listen-to-youtube-cli airpaste
+listen-to-youtube 'some-youtube-url' | airpaste
+
+# computer 2
+npm i airpaste speaker-cli
+airpaste | speaker
+```
 
 [![npm version](https://img.shields.io/npm/v/listen-to-youtube-cli.svg)](https://www.npmjs.com/package/listen-to-youtube-cli)
 [![build status](https://img.shields.io/travis/derhuerst/listen-to-youtube-cli.svg)](https://travis-ci.org/derhuerst/listen-to-youtube-cli)

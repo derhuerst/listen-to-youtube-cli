@@ -3,7 +3,6 @@
 const yt = require('ytdl-core')
 const ffmpeg = require('fluent-ffmpeg')
 const got = require('got')
-const Speaker = require('speaker')
 
 const findAudioStream = (url) => {
 	return yt.getInfo(url, {filter: 'audioonly'})
@@ -25,16 +24,14 @@ const createPCMStream = (input) => {
 	.format('s16le')
 }
 
-const listenToYoutube = (url) => {
-	const speaker = new Speaker()
-
+const listenToYoutube = (url, out) => {
 	return findAudioStream(url)
 	.then((url) => {
 		return new Promise((yay, nay) => {
 			createPCMStream(got.stream(url)) // todo: user-agent
 			.on('error', nay)
 			.on('end', yay)
-			.pipe(speaker, {end: true})
+			.pipe(out, {end: true})
 		})
 	})
 }
