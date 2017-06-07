@@ -22,6 +22,10 @@
 		"node": ">=6"
 	},
 	"dependencies": {
+		"fluent-ffmpeg": "^2.1.2",
+		"got": "^7.0.0",
+		"speaker": "^0.3.0",
+		"ytdl-core": "^0.14.2"
 	},
 	"devDependencies": {
 		"tape": "^4.6.3",
