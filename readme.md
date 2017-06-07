@@ -17,8 +17,12 @@ npm install listen-to-youtube-cli
 
 ## Usage
 
-```js
-todo
+```shell
+Usage:
+    listen-to-youtube <url>
+
+Examples:
+    listen-to-youtube 'https://www.youtube.com/watch?v=rFtP7Xc_Fbo'
 ```
 
 
