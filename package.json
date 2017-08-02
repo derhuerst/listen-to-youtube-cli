@@ -28,16 +28,8 @@
 	"dependencies": {
 		"fluent-ffmpeg": "^2.1.2",
 		"got": "^7.0.0",
-		"minimist": "^1.2.0",
+		"mri": "^1.1.0",
 		"speaker": "^0.3.0",
 		"ytdl-core": "^0.14.2"
-	},
-	"devDependencies": {
-		"tape": "^4.6.3",
-		"tap-min": "^1.2.1"
-	},
-	"scripts": {
-		"test": "node test.js | tap-min",
-		"prepublishOnly": "npm test"
 	}
 }

@@ -1,6 +1,8 @@
 # listen-to-youtube-cli
 
-**Stream YouTube audio and listen to it.** Magic UNIX:
+**Stream YouTube audio and listen to it.** Writes raw audio ([PCM](https://en.wikipedia.org/wiki/Pulse-code_modulation)) to `stdout`.
+
+Magic UNIX:
 
 ```shell
 # add ./node_modules/.bin to your $PATH
