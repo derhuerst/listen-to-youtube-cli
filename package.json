@@ -29,7 +29,7 @@
 		"fluent-ffmpeg": "^2.1.2",
 		"got": "^7.0.0",
 		"mri": "^1.1.0",
-		"speaker": "^0.3.0",
-		"ytdl-core": "^0.14.2"
+		"speaker": "^0.4.0",
+		"ytdl-core": "^0.20.1"
 	}
 }
