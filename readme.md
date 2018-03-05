@@ -2,7 +2,7 @@
 
 **Stream YouTube audio and listen to it.**
 
-When piping it, it will write raw audio ([PCM](https://en.wikipedia.org/wiki/Pulse-code_modulation)) to `stdout`. Otherwise, it will use [`speaker`](https://npmjs.com/).
+When piping it, it will write raw audio ([PCM](https://en.wikipedia.org/wiki/Pulse-code_modulation)) to `stdout`. Otherwise, it will use [`speaker`](https://www.npmjs.com/package/speaker).
 
 [![npm version](https://img.shields.io/npm/v/listen-to-youtube-cli.svg)](https://www.npmjs.com/package/listen-to-youtube-cli)
 [![build status](https://img.shields.io/travis/derhuerst/listen-to-youtube-cli.svg)](https://travis-ci.org/derhuerst/listen-to-youtube-cli)
