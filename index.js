@@ -8,8 +8,8 @@ const findAudioStream = (url) => {
 	return yt.getInfo(url, {filter: 'audioonly'})
 	.then((info) => {
 		const [src] = info.formats
-		.filter((f) => !f.resolution) // audio streams don't have a resolution
-		.sort((f1, f2) => f1.audioBitrate - f2.audioBitrate)
+		.filter(f => typeof f.audioBitrate === 'number')
+		.sort((f1, f2) => f2.audioBitrate - f1.audioBitrate) // desc
 
 		if (!src) throw new Error('no audio stream found')
 		return src.url
