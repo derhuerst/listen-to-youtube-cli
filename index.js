@@ -3,10 +3,13 @@
 const yt = require('ytdl-core')
 const ffmpeg = require('fluent-ffmpeg')
 const got = require('got')
+const debug = require('debug')('listen-to-youtube-cli')
 
 const findAudioStream = (url) => {
 	return yt.getInfo(url, {filter: 'audioonly'})
 	.then((info) => {
+		debug('formats', info.formats)
+
 		const [src] = info.formats
 		.filter(f => typeof f.audioBitrate === 'number')
 		.sort((f1, f2) => f2.audioBitrate - f1.audioBitrate) // desc
@@ -27,6 +30,7 @@ const createPCMStream = (input) => {
 const listenToYoutube = (url, out) => {
 	return findAudioStream(url)
 	.then((url) => {
+		debug('audio url', url)
 		return new Promise((yay, nay) => {
 			createPCMStream(got.stream(url)) // todo: user-agent
 			.on('error', nay)

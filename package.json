@@ -26,6 +26,7 @@
 		"node": ">=12"
 	},
 	"dependencies": {
+		"debug": "^4.1.1",
 		"fluent-ffmpeg": "^2.1.2",
 		"got": "^11.5.1",
 		"mri": "^1.1.0",
