@@ -1,7 +1,7 @@
 {
 	"name": "listen-to-youtube-cli",
 	"description": "Stream YouTube audio and listen to it.",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"main": "index.js",
 	"bin": {
 		"listen-to-youtube": "./cli.js"
